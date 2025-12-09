@@ -1,6 +1,4 @@
 import { Request, Response } from "express";
-import { pool } from "../../config/db";
-import config from "../../config";
 import bookingService from "./booking.service";
 const createBooking = async (req: Request, res: Response) => {
   try {
@@ -32,12 +30,12 @@ const createBooking = async (req: Request, res: Response) => {
 export const getAllBookingsHandler = async (req: Request, res: Response) => {
   try {
     const bookings = await bookingService.getAllBookings(
-      req.user.id,
-      req.user.role
+      req?.user?.id,
+      req?.user?.role
     );
 
     const message =
-      req.user.role === "admin"
+      req?.user?.role === "admin"
         ? "Bookings retrieved successfully"
         : "Your bookings retrieved successfully";
 
@@ -65,10 +63,10 @@ export const updateBookingHandler = async (req: Request, res: Response) => {
     }
 
     const updatedBooking = await bookingService.updateBookingStatus(
-      bookingId,
+      bookingId as any,
       status,
-      req.user.id,
-      req.user.role
+      req?.user?.id,
+      req?.user?.role
     );
 
     const message =

@@ -5,8 +5,7 @@ const createVehicle = async (
   type: string,
   registration_number: number,
   daily_rent_price: number,
-  availability_status: string,
-  vehicleId: string | undefined
+  availability_status: string
 ) => {
   const result = await pool.query(
     `INSERT INTO vehicles(vehicle_name,

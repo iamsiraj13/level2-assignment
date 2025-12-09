@@ -13,11 +13,13 @@ const createVehicle = async (req: Request, res: Response) => {
     } = req.body;
 
     const result = await vehicleService.createVehicle(
+      
       vehicle_name,
       type,
       registration_number,
       daily_rent_price,
-      availability_status
+      availability_status,
+       
     );
 
     res.status(200).json({
@@ -81,8 +83,8 @@ const vehicleUpdate = async (req: Request, res: Response) => {
       type,
       registration_number,
       daily_rent_price,
-      availability_status,
-      req.params.vehicleId
+      availability_status
+   
     );
 
     res.status(200).json({

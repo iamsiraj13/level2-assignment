@@ -23,7 +23,7 @@ const createBooking = async (
     [vehicleId, end, start]
   );
 
-  if (overlap.rowCount > 0) {
+  if (overlap?.rowCount as number > 0) {
     throw new Error("Vehicle already booked in this period");
   }
   // 3. Calculate price
