@@ -12,6 +12,12 @@ app.use(express.urlencoded());
 
 initDB();
 
+app.get("/",(req:Request,res:Response)=>{
+    res.json({
+        message:"Good Health"
+    })
+})
+
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/vehicles", vehiclesRoute);
 app.use("/api/v1/users", userRouter);
