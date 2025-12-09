@@ -2,8 +2,8 @@
 
 A fully functional **Vehicle Rental Management System** built with Node.js, Express, TypeScript, and PostgreSQL. Features role-based access control (Admin & Customer), secure JWT authentication, and complete CRUD operations for vehicles and bookings.
 
-**Live Deployment:** https://vehicle-rental-system-production.up.railway.app  
-**API Base URL:** `https://vehicle-rental-system-production.up.railway.app/api/v1`
+**Live Deployment:** https://assignment-2-eta-six.vercel.app/
+**API Base URL:** `https://assignment-2-eta-six.vercel.app/api/v1`
 
 ---
 
@@ -87,4 +87,5 @@ A fully functional **Vehicle Rental Management System** built with Node.js, Expr
    npm install
    npm run dev
    ```
+
 # level2-assignment
